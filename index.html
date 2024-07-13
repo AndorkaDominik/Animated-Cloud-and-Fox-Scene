@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Raining Cloud</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cloud"></div>
+        <div class="img">
+            <img src="./assets/fox.gif" class="fox" alt="">
+            <div class="forest">
+                <img src="./assets/tree.png" id="t1" alt="tree">
+                <img src="./assets/tree.png" id="t2" alt="tree">
+                <img src="./assets/bush.png" alt="bush" id="b1">
+                <img src="./assets/bush.png" alt="bush" id="b2">
+                <img src="./assets/bush.png" alt="bush" id="b3">
+                <img src="./assets/bush.png" alt="bush" id="b4">
+            </div>
+            <div>
+                <img src="./assets/grass.png" class="grass" id="one" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="two" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="three" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="four" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="five" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="six" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="seven" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="eight" alt="grass">
+                <img src="./assets/grass.png" class="grass" id="nine" alt="grass">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function rain(){
+            let cloud = document.querySelector('.cloud');
+            let e = document.createElement('div');
+            let left = Math.floor(Math.random()*310);
+            let width = Math.random() *5;
+            let height = Math.random() *25;
+            let duration = Math.random() * 0.8;
+
+            e.classList.add('drop');
+            cloud.appendChild(e);
+            e.style.left = left + 'px';
+            e.style.width = 0.5 + width + 'px';
+            e.style.height = 0.5 + height + 'px';
+            e.style.animationDuration = 1 + duration + 's';
+
+            setTimeout(function(){
+                cloud.removeChild(e);
+            }, 2000);
+        }
+
+        setInterval(function(){
+            rain();
+        }, 20)
+    </script>
+</body>
+</html>
