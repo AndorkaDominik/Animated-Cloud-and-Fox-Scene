@@ -2,7 +2,7 @@
 
 This project creates an animated scene featuring a cloud with raindrops, a fox, and a forest background using HTML and CSS animations.
 
-![Weather App Screenshot](./.github/preview.mp4)
+![Fox Scene Video Screenshot](./.github/preview.gif)
 
 ## Usage
 
